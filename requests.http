@@ -1,0 +1,47 @@
+# GET ALL RESSOURCES
+GET http://localhost:3001/api/invoices
+
+# Get RESSOURCE BY ID
+###
+GET http://localhost:3001/api/invoices/64bed67097260846fc819a07
+
+
+
+
+# CREATE NEW RESSOURCE
+###
+POST http://localhost:3001/api/invoices
+Content-Type: application/json
+
+{
+    "status": "Draft",
+    "senderAddress": "19 Union Terrace",
+    "senderCity": "London",
+    "senderCode": "E1 3EZ",
+    "senderCountry": "United Kingdom",
+    "invoiceDate": "2021-10-31",
+    "name": "Anita Wainwright",
+    "address": "106 Kendell Street",
+    "city": "Sharrington",
+    "code": "NR24 5WQ",
+    "country": "United Kingdom",
+    "email": "anita.waint@example.com",
+    "description": "Logo Re-design",
+    "itemName": "Logo Sketches",
+    "quantity": 2,
+    "price": 800
+}
+
+# UPDATE RESSOURCE
+###
+PUT http://localhost:3001/api/invoices/64beaa37f1912755254793be
+Content-Type: application/json
+
+{
+    "title": "Example B",
+    "price": 2000
+}
+
+# DELETE RESSOURCE BY ID
+###
+DELETE http://localhost:3001/api/invoices/64beb70ff1912755254793c1
