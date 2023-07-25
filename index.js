@@ -61,14 +61,7 @@ const errorHandler = (error, request, response, next) => {
 
 
 //GET ALL INVOICES
-app.get('/', (req, res) => {
-
-    // Using MongoDB
-    Invoice.find({}).then(invoice => {
-        res.json(invoice)
-    })
-})
-app.get('/invoices', (req, res) => {
+app.get('/api/invoices', (req, res) => {
 
     // Using MongoDB
     Invoice.find({}).then(invoice => {
